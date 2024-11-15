@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        .data {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Weather Data for {{ weather_data.location }}</h2>
+    <div class="section">
+        <div class="data">Temperature: {{ weather_data.temperature }} °C</div>
+        <div class="data">Humidity: {{ weather_data.humidity }}%</div>
+        <div class="data">Wind Speed: {{ weather_data.wind_speed }} m/s</div>
+    </div>
+
+    <h2>Air Quality Data for {{ air_quality_data.location }}</h2>
+    <div class="section">
+        <div class="data">AQI: {{ air_quality_data.aqi }}</div>
+        <div class="data">PM2.5: {{ air_quality_data.pm25 }} µg/m³</div>
+        <div class="data">PM10: {{ air_quality_data.pm10 }} µg/m³</div>
+    </div>
+</div>
+
+</body>
+</html>
